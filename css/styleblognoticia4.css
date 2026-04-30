@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@100;200;300;400;500;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+  
+  scrollbar-color: #056839 #000 #172627
+  ;
+
+  list-style: none;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #000;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #056839;
+  }
+
+
+body{
+    background-color: #f1fff9;
+    background-size:cover;
+    background-repeat: no-repeat;
+    
+}
+
+
+a{
+    text-decoration: none;
+    color: #000000;
+    
+}
+
+a:hover{
+    color: #ffffff;
+}
+
+/* INICIO DO MENU  */
+
+.menu{
+    width: 100%;
+    height: auto;
+    background-color: #0CB476;
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5vh;
+    flex-wrap: wrap;
+}
+
+.menu h1{
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: left; 
+}
+
+.menu img{
+    width: 50px;
+    height: 50px;
+}
+
+nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+nav .menu-icon{
+    cursor: pointer;
+    display: none;
+}
+nav .logo a{
+    font-size: 30px;
+    font-weight: bold;
+    color: #F1FFF9;
+    text-decoration: none;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+nav ul li{
+    padding: 0 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #F1FFF9;
+}
+    nav .menu-icon{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 60%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.3s ease-in;
+        background-color: #172627;
+    }
+    nav ul.active{
+        transform: translateX(0);
+    }
+    nav ul li{
+        padding: 10px;
+    }
+    nav ul li a{
+        font-size: 18px;
+        color: white;
+    }
+
+    .usermenu {
+        color: #F1FFF9;
+        display: flex;
+        align-items: center;
+        position: relative;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    
+    .usermenu:hover{
+        color: #0cb476;
+    }
+    
+    .usermenu ul{
+        width: 150px;
+        position: absolute;
+        height: auto;
+        color: #0cb476;
+        border: 1px solid;
+        border-radius: 10px;
+        margin: 30% 145px;
+        display: none;
+    }
+    
+    .usermenu ul li a{
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
+    
+    .usermenu:hover ul{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .sairv{
+        display: none;
+    }
+
+    
+.menu a :hover{
+    color: #0CB476;
+}
+    
+    .usermenu a:hover .sairb{
+        display: none;
+    }
+    
+    .usermenu a:hover .sairv{
+        display: block;
+    }
+    
+    
+    .usermenu  img{
+        width: 25px;
+        height: 25px;
+        transform: rotate(0deg);
+    }
+
+    .close-icon {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 24px;
+        color: #F1FFF9;
+        cursor: pointer;
+    }
+
+    /* COMEÇO DA NOTICIA */
+
+    #contnoticia{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        top: 86px;
+    }
+
+    .noticia-flex{
+        width: 70%;
+        height: auto;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .propaganda{
+        width: 100%;
+        height: auto;
+        margin-bottom: .5rem;
+    }
+
+    .propaganda img{
+        width: 100%;
+        height: 10rem;
+    }
+
+    .titulo{
+        color: #111111;
+        position: relative;
+        width: 100%;
+        line-height: 50px;
+        font-size: 20px;
+        height: auto;
+        margin-bottom: .5rem;
+    }
+
+    .lide{
+        position: relative;
+        width: 100;
+        font-size: 20px;
+        position: relative;
+        color: #6b6d6b;
+        height: auto;
+        margin-bottom: .5rem;
+    }
+
+
+    .etec{
+        position: relative;
+        width: 100%;
+        height: 30rem;
+        background-image: url(../imgs/blog4.jpg);
+        background-size: cover;
+        margin-bottom: .5rem;
+    } 
+
+
+
+
+    .textoimg{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #2f3134;
+        color: #a4b6be;
+    }
+
+    .textoimg p{
+        width: 100%;
+        margin: .5rem;
+        color: #a4b6be;
+        font-size: 16px;
+        
+    }
+
+    .noticia{
+        font-size: 20px;
+        position: relative;
+        width: 100%;
+        height: auto;
+        color: #474b49;
+        margin-bottom: .5rem;
+
+    }
+
+
+    #rodape-cont{
+        padding: 2.5vh;
+        width:100%;
+        height: auto;
+        background: #172627;
+        color: #F1FFF9;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .rodape-icon{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 3;
+        height: 25vh;
+    }
+    .rodape-icon img{
+        width: 6rem;
+        height: 5rem;
+    }
+
+    .rodape-menu,.rodape-contatos{
+        flex-grow: 1;
+        min-height: 25vh;
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border-left: 2px solid #F1FFF9;
+    }
+
+
+    #rodape-cont .titulo{
+        color: #24CA8C;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+
+    .rodape-menu a, .rodape-contatos a{
+        text-decoration: none;
+        color:#F1FFF9;
+        margin-bottom: 5rem;
+    }
+
+
+    @media only screen and (max-width: 800px){
+
+        .titulo{
+            font-size: 20px;
+        }
+
+    }
+
+    @media only screen and (max-width: 499px){
+
+        *{
+            font-size: medium;
+        }
+
+        .noticia-flex{
+            width: 100%;
+            height: auto;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: .5rem;
+        }
+
+        .titulo{
+            line-height: 30px;
+            font-size: large;
+        }
+
+        .menu img{
+            width: 25px;
+            height: 25px;
+        }
+
+
+
+        
+
+    }
+
+    @media screen and (max-width: 200px) {
+
+        *{
+            font-size:small;
+        }
+
+        nav ul {
+            width: 100%;
+            font-size: smaller;
+            overflow: scroll;       
+        }
+
+        @media screen and (max-width: 450px) {
+
+            nav ul {
+                width: 100%;
+            }
+        
+        
+        }
+        
+
+        #gt_float_wrapper{
+            display: none;
+        }
+
+        .enabled{
+            display: none;
+
+        }
+
+        #rodape-cont .titulo{
+
+            padding: .1rem;
+      }
+
+      .rodape-icon img{
+        display: none;
+      }
+
+      div[vw].enabled {
+        display: none;
+        visibility: hidden;
+       }
+
+       [vw] [vw-access-button].active {
+        display: none;
+        visibility: hidden;
+    }
+
+       [vw] [vw-access-button] img{
+        display: none;
+        visibility: hidden;
+       }
+    }
+
+

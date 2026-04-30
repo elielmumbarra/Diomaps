@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@100;200;300;400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+    scrollbar-width: thin;
+  
+  scrollbar-color: #056839 #000 #172627
+  ;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #000;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #056839;
+  }
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F1FFF9;
+    scroll-behavior: smooth;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #F1FFF9;
+}
+
+.menu a:hover {
+    color: #0cb476;
+}
+
+.menu {
+    padding: 1rem;
+    width: 100%;
+    background-color: #172627;
+    box-shadow: inset 0px 0px 52px -34px #111;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu h1 {
+    color: rgb(0, 0, 0);
+}
+
+.menu img {
+    width: 50px;
+    height: 50px;
+}
+
+#imgmenu {
+    position: relative;
+}
+
+nav {
+    position: relative;
+}
+
+nav .menu-icon {
+    cursor: pointer;
+    display: none;
+}
+
+nav .logo a {
+    font-size: 30px;
+    font-weight: bold;
+    color: #F1FFF9;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #F1FFF9;
+}
+
+nav .menu-icon {
+    display: block;
+}
+
+nav ul {
+    position: fixed;
+    width: 60%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s ease-in;
+    background-color: #172627;
+}
+
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    font-size: 18px;
+    color: white;
+}
+
+.close-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 24px;
+    color: #F1FFF9;
+    cursor: pointer;
+}
+
+.menu ul.active {
+    transform: translateX(0);
+    z-index: 3;
+    box-shadow: inset 0px 0px 52px -34px #111;
+    overflow-y: hidden; 
+}
+
+.menu ul.active + .close-icon {
+    display: block;
+}
+
+.usermenu {
+    color: #F1FFF9;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.usermenu:hover{
+    color: #0cb476;
+}
+
+.usermenu ul{
+    width: 150px;
+    position: absolute;
+    height: auto;
+    color: #0cb476;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 30% 145px;
+    display: none;
+}
+
+.usermenu ul li a{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.usermenu:hover ul{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sairv{
+    display: none;
+}
+
+.usermenu a:hover .sairb{
+    display: none;
+}
+
+.usermenu a:hover .sairv{
+    display: block;
+}
+
+
+.usermenu  img{
+    width: 25px;
+    height: 25px;
+    transform: rotate(0deg);
+}
+
+#container-geral{
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    padding: 2.5rem;
+}
+
+form, .form-sair {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #F1FFF9;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 1px solid #1111113d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.flex-cont{
+    height: 100%;
+    width: calc(97.5%/2);
+    padding: .5rem;
+
+}
+
+
+h2 {
+    display: flex;
+    flex-direction: wrap;
+    align-items: center;
+    text-transform: uppercase;
+    color: #172627;
+    padding: .5rem;
+    border-radius: 5px;
+  }
+
+  .infos{
+    padding: 0 1rem;
+    color: #172627;
+  }
+
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input, select, button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    transition: 0.2s;
+  }
+  
+  button {
+    background-color: #0cb476;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0cb476;
+  }
+
+  input{
+    max-width: 100%;
+    outline: none;
+    background: transparent;
+    color: #172627;
+    border: 0;
+    position: relative;
+    font-size: 16px;
+    padding: .3rem;    
+    padding-left: 3.5rem;
+
+    margin-bottom: 16px;
+    border-bottom: 1px solid #172627;
+    
+}
+
+input:hover{
+    border-bottom: 1px solid #0cb476;
+
+}
+
+input[name="telefone"]{
+  padding-left: 5rem;
+
+}
+
+label{
+  max-width: 100%;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0cb476;
+}
+
+input:focus {
+    padding-top: 1.5rem;
+    padding-left: 0;
+}
+
+label[for="bairro"], label[for="tipo_lixo"], label[for="imagem"]{
+    position: relative;
+}
+
+#inputFile{
+    padding: 0;
+}
+
+select{
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+select:hover{
+    border:1px solid #0cb476;
+}
+
+select:focus{
+    border:1px solid #0cb476;
+}
+
+#preview {
+    border-radius: 15px;
+    max-width: 100%;
+    max-height: 225px;
+    margin-top: 16px;
+
+}
+
+.edit-button{
+    position: relative;
+    width: 100%;
+}
+
+label[for="imagem"]{
+    cursor: pointer;
+
+}
+
+.form-sair a{
+    max-width:300px ;
+    background-color: #0cb476;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+}
+
+#delete{
+    max-width: 300px;
+}
+
+
+
+#aviso, #avisodelete{
+    position: absolute;
+    min-width: 25%;
+    width: auto;
+    height: 25%;
+    top: 37.5%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1;
+    background: #fff;
+    border: 1px solid #1111113d;
+    padding: .5rem;
+    border-radius: 15px;
+}
+
+#aviso{
+    display: flex;
+}
+
+#avisodelete{
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    #container-geral{
+        padding: .5rem;
+    }
+
+    form{
+        padding: .5rem;
+    }
+
+    .flex-cont{
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 200px) {
+
+    *{
+        font-size:small;
+    }
+
+
+    #gt_float_wrapper{
+        display: none;
+    }
+
+    .enabled{
+        display: none;
+
+    }
+
+    #rodape-cont .titulo{
+
+        padding: .1rem;
+  }
+
+  .rodape-icon img{
+    display: none;
+  }
+
+  div[vw].enabled {
+    display: none;
+    visibility: hidden;
+   }
+
+   [vw] [vw-access-button].active {
+    display: none;
+    visibility: hidden;
+}
+
+   [vw] [vw-access-button] img{
+    display: none;
+    visibility: hidden;
+   }
+
+   nav ul {
+    width: 100%;
+    font-size: smaller;
+    overflow: scroll;       
+}
+}
+
+@media screen and (max-width: 450px) {
+
+    nav ul {
+        width: 100%;
+    }
+
+
+}
+
+
